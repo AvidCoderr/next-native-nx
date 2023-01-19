@@ -1,6 +1,19 @@
 import { StyleSheet, View, Button } from 'react-native';
 import { Text } from '@webnative/wrapcity';
 
+export default function Profile() {
+  return (
+    <View style={styles.container}>
+      <Text accessibilityRole="header" style={styles.text}>
+        Profile Page
+      </Text>
+      <Text style={styles.link} accessibilityRole="link" href={`/`}>
+        <Button title="Home Page" />
+      </Text>{' '}
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -16,16 +29,3 @@ const styles = StyleSheet.create({
     color: 'blue',
   },
 });
-
-export default function Profile() {
-  return (
-    <View style={styles.container}>
-      <Text accessibilityRole="header" style={styles.text}>
-        Profile Page
-      </Text>
-      <Text style={styles.link} accessibilityRole="link" href={`/`}>
-        <Button title="Home Page" />
-      </Text>{' '}
-    </View>
-  );
-}
